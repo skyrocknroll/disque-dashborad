@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Disque</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Addr</th>
+        <th>Priority</th>
+    </tr>
+    {{with .Nodes }}
+    {{range .}}
+    <tr>
+        <td>{{.Id}}</td>
+        <td>{{.Addr}}</td>
+        <td>{{.Priority}}</td>
+    </tr>
+    {{end}}
+    {{end}}
+</table>
+
+</body>
+</html>
