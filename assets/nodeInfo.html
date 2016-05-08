@@ -1,0 +1,29 @@
+{{ define "nodeInfo" }}
+
+{{ template "header" . }}
+<div class="container">
+
+
+    {{ range $sectionName , $values := . }}
+
+
+    <table class="table table-bordered table-striped table-responsive">
+        <thead>
+        <tr>
+            <th colspan="2">{{$sectionName}}</th>
+        </tr>
+        </thead>
+        {{ range $key , $value := $values }}
+        <tr>
+            <td>{{$key}}</td>
+            <td>{{$value}}</td>
+        </tr>
+        {{ end}}
+    </table>
+
+    {{end }}
+</div>
+
+
+{{ template "footer" . }}
+{{end}}

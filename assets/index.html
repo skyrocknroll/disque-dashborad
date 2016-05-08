@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello Disque</title>
-</head>
-<body>
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Addr</th>
-        <th>Priority</th>
-    </tr>
-    {{with .Nodes }}
-    {{range .}}
-    <tr>
-        <td>{{.Id}}</td>
-        <td>{{.Addr}}</td>
-        <td>{{.Priority}}</td>
-    </tr>
-    {{end}}
-    {{end}}
-</table>
+{{define "Dashboard"}}
+{{template "header" . }}
+<div id="container" class="container">
+    <!--<div class="row">-->
+    <!--<div class="col-md-8"><h1 class="pull-left text-primary">Disque Dahboard</h1></div>-->
+    <!--<div class="col-md-4 "><h1 class="pull-right text-success"> Nodes {{len .Nodes }}</h1></div>-->
+    <!--</div>-->
 
-</body>
-</html>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Addr</th>
+            <th>Priority</th>
+        </tr>
+        {{with .Nodes }}
+        {{range .}}
+        <tr>
+            <td><a href="/node-info?addr={{.Addr}}">{{.Id}}</a></td>
+            <td>{{.Addr}}</td>
+            <td>{{.Priority}}</td>
+        </tr>
+        {{end}}
+        {{end}}
+    </table>
+</div>
+{{template "footer" . }}
+{{end}}
+
+
+

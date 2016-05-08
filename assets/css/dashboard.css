@@ -1,0 +1,16 @@
+body {
+    min-height: 2000px;
+    padding-top: 0;
+}
+
+.node-count {
+    color: #3c763d;
+    font-size: 25px;
+}
+
+.nodes-text {
+    color: #000000;
+    /*text-decoration-color: #000000;*/
+    font-size: 25px;
+
+}
