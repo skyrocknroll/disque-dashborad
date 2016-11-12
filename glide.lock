@@ -1,0 +1,17 @@
+hash: 7b3e747fa51ae1ea0c1e81d1fa59cfaf929b2d24a7b75f038d25afd4a2fe785c
+updated: 2016-11-12T22:21:22.475810135+05:30
+imports:
+- name: github.com/EverythingMe/go-disque
+  version: 5d0e3c9dd5366e0b4cb3bcab50cb4ae4f4dcf68d
+  subpackages:
+  - disque
+- name: github.com/garyburd/redigo
+  version: 8873b2f1995f59d4bcdd2b0dc9858e2cb9bf0c13
+  subpackages:
+  - internal
+  - redis
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/mux
+  version: 0eeaf8392f5b04950925b8a69fe70f110fa7cbfc
+testImports: []
